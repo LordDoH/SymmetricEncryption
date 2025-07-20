@@ -17,12 +17,22 @@ app.get("/", (req, res) => {
 
 app.post("/encrypt", (req, res) => {
   const text = req.body.text;
+  /**
+   * Encrypts the provided text using the specified cipher and returns the encrypted data as a hexadecimal string.
+   *
+   * @type {string}
+   */
   const encrypted = cipher.update(text, "utf8", "hex") + cipher.final("hex");
   res.json({ encrypted });
 });
 
 app.post("/decrypt", (req, res) => {
   const encrypted = req.body.encrypted;
+  /**
+   * Decrypted plaintext obtained from the encrypted input using the decipher instance.
+   *
+   * @type {string}
+   */
   const decrypted =
     decipher.update(encrypted, "hex", "utf8") + decipher.final("utf8");
   res.json({ decrypted });

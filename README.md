@@ -6,7 +6,8 @@ Inicialización
 Posibilidades  
 Uso de llaves simétricas  
 Librerías utilizadas  
-Instrucciones de uso
+Instrucciones de uso  
+Ejecución de tests
 
 ## Inicialización
 
@@ -44,6 +45,16 @@ Inicializa la aplicación ejecutando npm start.
 Utiliza un cliente HTTP (como curl o Postman) para enviar solicitudes a los endpoints /encrypt y /decrypt.  
 Enviar un texto en formato JSON a /encrypt para cifrarlo.  
 Enviar un texto cifrado en formato hexadecimal a /decrypt para descifrarlo.
+
+## Ejecución de tests
+
+Para ejecutar los tests de la aplicación, utiliza el siguiente comando en la terminal:
+
+```bash
+npm test
+```
+
+Esto ejecutará las pruebas definidas y mostrará los resultados en la consola.
 
 ## Ejemplos de solicitud
 
